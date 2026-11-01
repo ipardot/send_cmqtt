@@ -177,7 +177,7 @@ if st.button('💡 Encender luz'):
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
-    ret= client1.publish("hola1", message)
+    ret= client1.publish("cmqtt_a", message)
  
     #client1.subscribe("Sensores")
     
@@ -191,7 +191,7 @@ if st.button('🌑 Apagar luz'):
     client1.on_publish = on_publish                          
     client1.connect(broker,port)  
     message =json.dumps({"Act1":act1})
-    ret= client1.publish("hola1", message)
+    ret= client1.publish("cmqtt_a", message)
   
     
 else:
@@ -206,7 +206,7 @@ if st.button('🍷 Ajustar ventilación'):
     client1.on_publish = on_publish                          
     client1.connect(broker,port)   
     message =json.dumps({"Analog": float(values)})
-    ret= client1.publish("hola2", message)
+    ret= client1.publish("cmqtt_s", message)
     
  
 else:
