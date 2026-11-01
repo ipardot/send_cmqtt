@@ -103,6 +103,9 @@ h1 a, h2 a, h3 a{ display:none !important; }
 }
 .stApp hr{ border-color: rgba(201,164,92,.45); }
 
+/* Botones sin efecto hover (el cambio de color queda "congelado") */
+.stApp [data-testid="stButton"] button{ transition: all 0s 100000s !important; }
+
 /* Barra lateral: piedra cálida */
 section[data-testid="stSidebar"]{
   background:var(--crema);
